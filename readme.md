@@ -1,6 +1,6 @@
 # Real-Time Collaborative Code Editor
 
-## Assignment #1 - Complex Web Technologies
+## Assignment web - Complex Web Technologies
 **COMSATS University Islamabad, Sahiwal Campus**
 
 ### Features
