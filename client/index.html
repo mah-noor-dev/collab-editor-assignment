@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Real-Time Collaborative Code Editor</h1>
+            <div class="status">
+                <span id="user-count">0 users online</span>
+                <span id="connection-status">Connecting...</span>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <h3>Active Users</h3>
+                <ul id="user-list"></ul>
+                <div class="controls">
+                    <button id="undo-btn" title="Undo">↶ Undo</button>
+                    <button id="redo-btn" title="Redo">↷ Redo</button>
+                </div>
+            </div>
+            
+            <div class="editor-area">
+                <textarea id="code-editor">// Welcome to collaborative editor!
+// Multiple users can edit simultaneously.
+// Try opening this in another browser!</textarea>
+                <div id="remote-cursors"></div>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Conflict Resolution:</strong> Operational Transformation</p>
+            <p><strong>Technology:</strong> WebSocket + OT Algorithm</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
